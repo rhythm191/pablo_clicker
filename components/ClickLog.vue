@@ -1,8 +1,16 @@
 <template>
   <div class="click-log">
     <ul class="click-log__list">
-      <li v-for="(item, index) in rates.reverse()" :key="index">
-        {{ item }} フレームです。
+      <li
+        v-for="(rate, index) in reverseRate"
+        :key="index"
+        :class="{
+          valid: rate.isValid(),
+          fast: rate.isFast(),
+          slow: rate.isSlow()
+        }"
+      >
+        {{ rate.rate }} フレームです。
       </li>
     </ul>
   </div>
@@ -14,6 +22,11 @@ export default {
     rates: {
       type: Array,
       required: true
+    }
+  },
+  computed: {
+    reverseRate() {
+      return this.rates.concat().reverse()
     }
   }
 }
@@ -31,5 +44,15 @@ export default {
 .click-log__list {
   margin: 0;
   list-style: none;
+}
+
+.valid {
+  color: blue;
+}
+.fast {
+  color: red;
+}
+.slow {
+  color: orange;
 }
 </style>
