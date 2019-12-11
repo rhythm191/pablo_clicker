@@ -1,7 +1,9 @@
 <template>
   <div class="click-log">
     <ul class="click-log__list">
-      <li v-for="click_rate in click_rates">{{ click_rate }}Fで入力しました。</li>
+      <li v-for="(item, index) in rates" :key="index">
+        {{ item }} フレームです。
+      </li>
     </ul>
   </div>
 </template>
@@ -9,22 +11,22 @@
 <script>
 export default {
   props: {
-    click_rates: {
+    rates: {
       type: Array,
-      default: []
+      required: true
     }
   }
 }
 </script>
 
 <style scoped>
-  .click-log {
-    border: 1px solid #999;
-    padding: 10px;
-  }
+.click-log {
+  border: 1px solid #999;
+  padding: 10px;
+}
 
-  .click-log__list {
-    margin: 0;
-    list-style: none;
-  }
+.click-log__list {
+  margin: 0;
+  list-style: none;
+}
 </style>
