@@ -4,9 +4,6 @@
       <h1 class="title">
         frame_clicker
       </h1>
-      <h2 class="subtitle">
-        To measure click frame
-      </h2>
       <div>
         <App></App>
       </div>
@@ -28,9 +25,9 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -39,9 +36,10 @@ export default {
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 50px;
   color: #35495e;
   letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
 .subtitle {

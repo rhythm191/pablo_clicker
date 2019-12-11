@@ -1,7 +1,7 @@
 <template>
   <div class="click-log">
     <ul class="click-log__list">
-      <li v-for="(item, index) in rates" :key="index">
+      <li v-for="(item, index) in rates.reverse()" :key="index">
         {{ item }} フレームです。
       </li>
     </ul>
@@ -23,6 +23,9 @@ export default {
 .click-log {
   border: 1px solid #999;
   padding: 10px;
+  height: 300px;
+  overflow: scroll;
+  text-align: left;
 }
 
 .click-log__list {

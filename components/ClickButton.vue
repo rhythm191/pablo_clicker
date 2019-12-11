@@ -1,12 +1,8 @@
 <template>
   <div class="click-button-wrapper">
-    <!-- <button v-if="state === 'start'" class="click-button" @click="start">
-      Start
-    </button> -->
     <button class="click-button" @click="measure">
       Click
     </button>
-    <!-- <button v-else class="click-button" disabled>Select rate</button> -->
   </div>
 </template>
 
@@ -14,13 +10,6 @@
 import _ from 'lodash'
 
 export default {
-  // props: {
-  //   state: {
-  //     type: String,
-  //     required: true
-  //   }
-  // },
-
   data() {
     return {
       startTime: performance.now()
@@ -47,4 +36,15 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.click-button {
+  width: 200px;
+  height: 200px;
+  background-color: #f30000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 60px;
+  cursor: pointer;
+  margin: 20px auto;
+}
+</style>
