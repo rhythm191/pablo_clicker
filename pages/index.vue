@@ -1,13 +1,7 @@
 <template>
   <div class="container">
-    <div>
-      <h1 class="title">
-        frame_clicker
-      </h1>
-      <div>
-        <App></App>
-      </div>
-    </div>
+    <h1 class="title">パブロ筋測定器</h1>
+    <App></App>
   </div>
 </template>
 
@@ -24,11 +18,17 @@ export default {
 <style>
 .container {
   margin: 0 auto;
+  height: 100vh;
   min-height: 100vh;
   max-height: 100vh;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  flex-flow: column;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: space-between;
+  }
 }
 
 .title {
@@ -37,17 +37,16 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 50px;
+  text-align: center;
   color: #35495e;
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+@media screen and (max-width: 544px) {
+  .title {
+    font-size: 40px;
+  }
 }
 
 .links {

@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <ClickButton @measure="appendRate"></ClickButton>
+  <div class="app-container">
+    <ClickLog :rates="clickRates"></ClickLog>
     <RateSelector
       :valid-rate="validRate"
       @change="changeValidRate"
     ></RateSelector>
-    <ClickLog :rates="clickRates"></ClickLog>
+    <ClickButton @measure="appendRate"></ClickButton>
   </div>
 </template>
 
@@ -40,3 +40,20 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.app-container {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    justify-content: flex-end;
+  }
+}
+</style>

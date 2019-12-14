@@ -34,15 +34,22 @@ export default {
 
 <style scoped>
 .click-log {
+  width: 100%;
   border: 1px solid #999;
   padding: 10px;
-  height: 300px;
+  height: 100%;
   overflow: scroll;
   text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .click-log {
+    max-height: 300px;
+  }
 }
 
 .click-log__list {
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
