@@ -1,10 +1,10 @@
-# frame_clicker
+# pablo_clicker
 
 > To measure click frame
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
