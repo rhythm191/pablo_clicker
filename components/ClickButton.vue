@@ -1,6 +1,6 @@
 <template>
   <div class="click-button-wrapper">
-    <button class="click-button click-anime-7" @click="measure">
+    <button class="click-button" @click="measure">
       Click
     </button>
   </div>
@@ -41,7 +41,7 @@ export default {
   width: 200px;
   height: 200px;
   color: #fff;
-  background-color: #f30000;
+  background: #f30000;
   border-radius: 50%;
   font-size: 60px;
   cursor: pointer;
